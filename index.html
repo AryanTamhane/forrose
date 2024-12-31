@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="main-title">This For You Rose!!</title>
+    <meta property="og:image" content="istockphoto-1144366181-612x612.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <style>
+        body {
+            background-color: #ffebee; 
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            border: 2px solid #f48fb1;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            color: #ff4081;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5);
+        }
+
+        .kitty-gif {
+            width: 150px;
+           
+            margin: 15px 0;
+        }
+
+       
+        .sad-kitty-gif {
+            width: 150px;
+            margin: 15px 0;
+        }
+
+        .options {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #yes-button {
+            background-color: #81c784;
+            color: white;
+            position: relative;
+        }
+
+        #no-button {
+            background-color: #ff8a65;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 2em;
+            color: #ff4081;
+        }
+
+        .scroll-message {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+
+        .arrow {
+            width: 30px;
+            margin-top: 10px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .image-sequence {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .image {
+            width: 90%;
+            max-width: 560px;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .reading-content {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .click-me-message {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #ff4081;
+        }
+
+        .upward-arrow {
+            width: 30px;
+            margin-top: 10px;
+            animation: upDown 1s infinite;
+        }
+
+        @keyframes upDown {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 50px;
+            }
+
+            h1 {
+                font-size: 3.5em;
+            }
+
+            .kitty-gif, .sad-kitty-gif {
+                width: 220px;
+            }
+
+            button {
+                padding: 15px 35px;
+                font-size: 22px;
+            }
+
+            .message {
+                font-size: 2.5em;
+            }
+
+            .scroll-message {
+                font-size: 2em;
+            }
+
+            .arrow, .upward-arrow {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> DO YOU LOVE ME Rose? </h1>
+        <img src="OIP.jpg" alt="Cute Kitty" class="kitty-gif">
+        <div class="options">
+            <button id="yes-button">YES 💚</button>
+            <button id="no-button">NO 💔</button>
+        </div>
+        <div id="message" class="hidden message">
+            😢 DON'T YOU LOVE ME? 😢<br>
+            <img src="sad-cat.gif" alt="Sad Kitty" class="sad-kitty-gif">
+        </div>
+        <div id="scroll-section" class="hidden">
+            <div class="scroll-message">Scroll</div>
+            <img src="1766160-middle.png" alt="Downward Arrow" class="arrow">
+        </div>
+        <div id="image-sequence" class="image-sequence">
+            <img src="page1.png" alt="Page 1" class="image" />
+            <img src="page2.png" alt="Page 2" class="image" />
+            <img src="page3.png" alt="Page 3" class="image" />
+            <img src="page4.png" alt="Page 4" class="image" />
+        </div>
+        <div id="click-me-section" class="hidden">
+            <div class="click-me-message">
+                Thanks for reading this message, now I want your reply on Discord <br> 
+                I was planning to send this on Christmas but my website was under development and I was also like "what to say" and like how to start <br> 
+                Then I thought 1 Jan 2025 would be best day for my little surprise. And I also Wanted to make this website a little Funny hehe <br> I also thought that making website for you would be best way to propose again And don't worry this is Private Website and only You and I know about this<br> I think I will send the link of the website on 1 or 2 Jan 2025 <br>
+                Anyways don't forgot about your goals, I have very high expectations so study hard and kill the every exam you encounter<br> And Remember I am always with you by your side!! <br> So yaa see yaa <br> Byii Byii <br> 🎆Happy New Year🎆 <br> You can close this now <br> Thank You!!  
+            </div>
+            <img src="istockphoto-1144366181-612x612.jpg" alt="Upward Arrow" class="upward-arrow">
+        </div>
+        <footer>© 2025 Aryan Tamhane. All rights reserved.</footer>
+    </div>
+</body>
+<script>
+const noButton = document.getElementById('no-button');
+const yesButton = document.getElementById('yes-button');
+const messageDiv = document.getElementById('message');
+let noButtonClickCount = 0; 
+
+function teleportNoButton() {
+    const container = document.querySelector('.container');
+    const containerRect = container.getBoundingClientRect();
+    const randomX = Math.random() * (containerRect.width - 100);
+    const randomY = Math.random() * (containerRect.height - 50);
+    noButton.style.position = 'absolute';
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
+    noButtonClickCount++;
+    animateYesButton();
+    if (noButtonClickCount >= 5) {
+        displayMessage();
+    }
+}
+
+function animateYesButton() {
+    yesButton.classList.add('pulse');
+    setTimeout(() => {
+        yesButton.classList.remove('pulse');
+    }, 1000);
+}
+
+function displayMessage() {
+    noButton.classList.add('hidden');
+    yesButton.classList.add('hidden');
+    messageDiv.classList.remove('hidden');
+    setTimeout(() => {
+        resetGame();
+    }, 3000);
+}
+
+function resetGame() {
+    messageDiv.classList.add('hidden');
+    noButtonClickCount = 0;
+    noButton.classList.remove('hidden');
+    yesButton.classList.remove('hidden');
+    teleportNoButton();
+}
+
+noButton.addEventListener('mouseover', teleportNoButton);
+noButton.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    teleportNoButton();
+});
+
+document.getElementById('yes-button').addEventListener('click', function() {
+    document.querySelector('.options').classList.add('hidden');
+    document.getElementById('scroll-section').classList.remove('hidden');
+});
+
+document.getElementById('yes-button').addEventListener('click', function() {
+    document.getElementById('scroll-section').classList.remove('hidden');
+    document.getElementById('image-sequence').style.display = 'flex';
+    let images = document.querySelectorAll('.image');
+    let index = 0;
+    images.forEach((img, idx) => {
+        img.style.display = 'block';
+        img.style.opacity = 0;
+        setTimeout(() => {
+            img.style.transition = 'opacity 1s';
+            img.style.opacity = 1;
+        }, idx * 2000);
+    });
+});
+
+document.getElementById('no-button').addEventListener('click', function() {
+    document.getElementById('message').classList.remove('hidden');
+    this.classList.add('shake');
+});
+
+document.getElementById('yes-button').addEventListener('click', function() {
+    document.querySelector('.options').style.display = 'none';
+    document.getElementById('scroll-section').classList.remove('hidden');
+    const images = document.querySelectorAll('.image');
+    images.forEach((img, index) => {
+        setTimeout(() => {
+            img.style.display = 'block';
+            if (index === images.length - 1) {
+                setTimeout(() => {
+                    document.getElementById('click-me-section').classList.remove('hidden');
+                }, 1000);
+            }
+        }, index * 1000);
+    });
+});
+
+document.querySelector('.upward-arrow').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</html>
+
